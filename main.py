@@ -25,4 +25,4 @@ while True:
   except ValueError:
     print('Enter a valid number!')
     
-print(f'\nThe encrypted word is: {letter_index(phrase, number)}\nEncryption code: {number}')
+print(f'\nThe encrypted phrase is: {letter_index(phrase, number)}\nEncryption code: {number}')

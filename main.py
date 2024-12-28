@@ -1,5 +1,5 @@
 def letter_index(x, y):
-  alp = ('a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z')
+  alp = 'abcdefghijklmnopqrstuvwxyz'
   index = [] # index of each replacement letter
   words = [] 
   for letter in x.lower(): 
@@ -11,11 +11,11 @@ def letter_index(x, y):
   for item in index:
     words.append(alp[item]) # change from index to letter
     
-  return "".join(words) # return 
+  return "".join(words) # return of the 'encrypted' sentence
 
 print('Caesar Cipher!\n')
 
-phrase = input('Enter the phrase you would like to encrypt: ')
+phrase = input('Enter the sentence you would like to encrypt: ')
 
 while True:
   number = input('\nEnter the number of the displacement: ')
@@ -25,4 +25,4 @@ while True:
   except ValueError:
     print('Enter a valid number!')
     
-print(f'\nThe encrypted phrase is: {letter_index(phrase, number)}\nEncryption code: {number}')
+print(f'\nThe encrypted sentence is: {letter_index(phrase, number)}\nEncryption code: {number}')
